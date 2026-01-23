@@ -8,19 +8,17 @@
   </head>
   <body>
     <div class="imgs_container">
-      <div class="img_contanier">
+      <% images.forEach(image => {%> 
+        <div class="img_contanier">
         <div class="img">
-          <img src="" alt="Image" />
+          <img src="<%= image.url %>" alt="Image" height="300" width="300" />
         </div>
-        <form action="/" method="post">
-          <button class="btn btn-delete">
-            <form action="/delete?_method=DELETE" method="post">
-              <input type="hidden" name="_method" value="DELETE" />
-              <a href="/delete">Delete</a>
-            </form>
-          </button>
+        <form action="/delete/<%= image.id %>?_method=DELETE" method="POST">
+          <button class="btn btn-delete" type="submit">Delete</button>
         </form>
       </div>
+      <%})%>
+      
     </div>
   </body>
 </html>

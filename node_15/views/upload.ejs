@@ -15,9 +15,9 @@
             <h4>Select File here</h4>
           </header>
           <p>Files Supported: PDF, Imgs</p>
-          <form action="" method="post" enctype="multipart/form-data">
-            <input type="file" hidden id="fileID" style="display: none" />
-            <button class="btn">Choose File</button>
+          <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file"  name="singleimage" id="fileID"  />
+            <input type="submit" class="btn" value="upload file">
           </form>
         </div>
       </div>
